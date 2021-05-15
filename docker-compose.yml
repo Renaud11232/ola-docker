@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ola:
+    container_name: ola
+    image: 'quay.io/renaud11232/ola'
+    volumes:
+      - ./config:/root/.ola
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/bus/usb/001/005:/dev/bus/usb/001/005
+    restart: unless-stopped
+    network_mode: host
