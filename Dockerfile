@@ -7,7 +7,7 @@ RUN cd /tmp \
   && cd ola-0.10.8 \
   && autoreconf -i \
   && ./configure --disable-root-check \
-  && make -j 2 \
+  && make \
   && make install \
   && apt autoremove --purge -y pkg-config libtool autoconf automake g++ protobuf-compiler bison flex make libcppunit-dev python-protobuf python-numpy wget libprotobuf-dev libftdi-dev liblo-dev libmicrohttpd-dev libusb-1.0-0-dev uuid-dev libncurses-dev libprotoc-dev zlib1g-dev \
   && apt clean \
