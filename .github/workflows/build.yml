@@ -15,6 +15,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ghcr.io/Renaud11232/ola
+          tags: latest
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v1
       - name: Setup Docker buildx
